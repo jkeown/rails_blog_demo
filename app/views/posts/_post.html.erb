@@ -1,0 +1,14 @@
+<div id="<%= dom_id post %>">
+  <h2>
+    <%# <strong>Title:</strong> %>
+    <%= post.title %>
+  </h2>
+  <p>
+    <%# <strong>Body:</strong> %>
+    <% if request.fullpath != '/posts'%>
+      <%= post.body %>
+    <% else %>
+      <%= truncate(post.body, length: 200) %>
+    <% end %>
+  </p>
+</div>
