@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   # get 'pages/home' ---> not necessary since made root path
   # get 'pages/about' ---> to define routes better - alternative syntax below:
   get 'about', to: 'pages#about'
